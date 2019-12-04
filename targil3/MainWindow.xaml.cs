@@ -21,12 +21,15 @@ namespace targil3
     public partial class MainWindow : Window
     {
         private Host currentHost;
-        public  List<Host> hostsList;
+        public List<Host> hostsList;
         public MainWindow()
         {
             InitializeComponent();
+            cbHostList.ItemsSource = hostsList;
+            cbHostList.DisplayMemberPath = "HostName";
+            cbHostList.SelectedIndex = 0;
 
-            List<Host> hostsList = new List<Host>()
+            hostsList = new List<Host>()
             {
                 new Host ()
                 {
@@ -39,7 +42,8 @@ namespace targil3
                             Rooms= 6,
                             IsSwimmingPool= true,
                             AllOrders =new List<DateTime>(),
-                            Uris= new List<string>(){}
+                            Uris= new List<string>(){"https://www.zimertop.co.il/gallery/149121207443.jpg",
+                                " https://www.zimertop.co.il/gallery/149121207442.jpg","https://www.zimertop.co.il/gallery/149121207451.jpg" }
                         },
                         new HostingUnit()
                         {
@@ -47,7 +51,8 @@ namespace targil3
                             Rooms= 4,
                             IsSwimmingPool= true,
                             AllOrders =new List<DateTime>(),
-                            Uris= new List<string>(){}
+                            Uris= new List<string>(){"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAIPZwPdR6KGpTYAbmNv3j5Ce-VQVGsfBbBhIrbd7GuxBfS4JEk8haDoc&s",
+                                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5-pCh6bawBMsCuIxLuObQcmhI9WeVIDoQKm11DYZKreGmQnPxjfaTNjY&s","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe2lRKCt42GL-xCKZfWwm2uJ0k66JAxNAyb9QFVDpe150xhP54ojI82do&s" }
                         }
                     }
 
@@ -63,7 +68,8 @@ namespace targil3
                             Rooms= 2,
                             IsSwimmingPool= true,
                             AllOrders =new List<DateTime>(),
-                            Uris= new List<string>(){}
+                            Uris= new List<string>(){"https://www.zimertop.co.il/gallery/149121207443.jpg",
+                                " https://www.zimertop.co.il/gallery/149121207442.jpg","https://www.zimertop.co.il/gallery/149121207451.jpg"}
                         },
                         new HostingUnit()
                         {
@@ -71,7 +77,9 @@ namespace targil3
                             Rooms= 2,
                             IsSwimmingPool= false,
                             AllOrders =new List<DateTime>(),
-                            Uris= new List<string>(){}
+                            Uris= new List<string>(){"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAIPZwPdR6KGpTYAbmNv3j5Ce-VQVGsfBbBhIrbd7GuxBfS4JEk8haDoc&s",
+                                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5-pCh6bawBMsCuIxLuObQcmhI9WeVIDoQKm11DYZKreGmQnPxjfaTNjY&s",
+                                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe2lRKCt42GL-xCKZfWwm2uJ0k66JAxNAyb9QFVDpe150xhP54ojI82do&s" }
                         }
                     }
 
@@ -87,7 +95,8 @@ namespace targil3
                             Rooms= 4,
                             IsSwimmingPool= false,
                             AllOrders =new List<DateTime>(),
-                            Uris= new List<string>(){}
+                            Uris= new List<string>(){"https://www.zimertop.co.il/gallery/149121207443.jpg",
+                                " https://www.zimertop.co.il/gallery/149121207442.jpg","https://www.zimertop.co.il/gallery/149121207451.jpg"}
                         },
                         new HostingUnit()
                         {
@@ -95,15 +104,15 @@ namespace targil3
                             Rooms= 4,
                             IsSwimmingPool= false,
                             AllOrders =new List<DateTime>(),
-                            Uris= new List<string>(){}
+                            Uris= new List<string>(){"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAIPZwPdR6KGpTYAbmNv3j5Ce-VQVGsfBbBhIrbd7GuxBfS4JEk8haDoc&s",
+                                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5-pCh6bawBMsCuIxLuObQcmhI9WeVIDoQKm11DYZKreGmQnPxjfaTNjY&s",
+                                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe2lRKCt42GL-xCKZfWwm2uJ0k66JAxNAyb9QFVDpe150xhP54ojI82do&s" }
                         }
                     }
 
                 }
             };
-            cbHostList.ItemsSource = hostsList;
-            cbHostList.DisplayMemberPath = "HostName";
-            cbHostList.SelectedIndex = 0;
+            
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -121,6 +130,7 @@ namespace targil3
                 MainGrid.Children.Add(a);
                 Grid.SetRow(a, i + 1);
             }
-        }
+        }
+
     }
 }

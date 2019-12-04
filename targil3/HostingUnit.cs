@@ -11,7 +11,8 @@ namespace targil3
         public string UnitName;
         public int Rooms;
         public bool IsSwimmingPool;
-        public List<DateTime> AllOrders { get; set; }        public List<string> Uris { get; set; }
+        public List<DateTime> AllOrders { get; set; }
+        public List<string> Uris { get; set; }
 
     }
 }

@@ -13,14 +13,15 @@
             <RowDefinition Height="200*"/>
             <RowDefinition Height="200*"/>
         </Grid.RowDefinitions>
-        <Grid x:Name="UpGrid" HorizontalAlignment="Stretch" Height="auto"  Grid.Row="0" VerticalAlignment="Stretch" Width="auto">
+        <Grid x:Name="UpGrid" HorizontalAlignment="Stretch" Height="38"  Grid.Row="0" VerticalAlignment="Top" Width="auto">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions >
-            <ComboBox x:Name="cbHostList" Grid.Column="0" HorizontalAlignment="Stretch" Margin="247,10,0,0" VerticalAlignment="Stretch" Width="120" SelectionChanged="ComboBox_SelectionChanged"/>
-            <TextBox x:Name="tbHostName" Grid.Column="1" HorizontalAlignment="Stretch" Height="23" Margin="92,9,0,0" TextWrapping="Wrap" Text="{Binding Path=HostName}" VerticalAlignment="Stretch" Width="120" FontFamily="Rod" FontSize="22"/>
+            <ComboBox x:Name="cbHostList" Grid.Column="0" HorizontalAlignment="Stretch" Margin="262,10,14,0" Width="120" SelectionChanged="ComboBox_SelectionChanged"/>
+            <TextBox x:Name="tbHostName" Grid.Column="1" HorizontalAlignment="Right" Height="23" Margin="0,12,92,3" TextWrapping="Wrap" Text="{Binding Path=HostName}" VerticalAlignment="Stretch" Width="120" FontFamily="Rod" FontSize="22"/>
         </Grid>
+        <ListBox HorizontalAlignment="Left" Height="100" Margin="1427,136,-735,-45" Grid.Row="3" VerticalAlignment="Top" Width="100"/>
 
     </Grid>
 </Window>

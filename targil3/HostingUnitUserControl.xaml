@@ -12,12 +12,14 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions >
-        <TextBox x:Name="tbUnitName" HorizontalAlignment="Left" Height="23" Margin="99,27,0,0" TextWrapping="Wrap" Text="{Binding Path=UnitName}" VerticalAlignment="Top" Width="120"/>
-        <Label Content=" מספר חדרים" HorizontalAlignment="Left" Margin="121,72,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbRooms" HorizontalAlignment="Left" Height="23" Margin="121,130,0,0" TextWrapping="Wrap" Text= "{Binding Path=Rooms}" VerticalAlignment="Top" Width="120"/>
-        <CheckBox x:Name="IsSwimigPool" Content="בריכה" HorizontalAlignment="Left" Margin="33,130,0,0" VerticalAlignment="Top" IsChecked="{Binding Path=IsSwimingPool}"/>
+        <TextBox x:Name="tbUnitName" HorizontalAlignment="Left" Height="23" Margin="74,43,0,0" TextWrapping="Wrap" Text="{Binding Path=UnitName}" VerticalAlignment="Top" Width="120"/>
+        <Label Content=" מספר חדרים" HorizontalAlignment="Left" Margin="121,82,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbRooms" HorizontalAlignment="Left" Height="23" Margin="74,92,0,0" TextWrapping="Wrap" Text= "{Binding Path=Rooms}"
+ VerticalAlignment="Top" Width="30"/>
+        <CheckBox x:Name="IsSwimigPool" Content="בריכה" HorizontalAlignment="Left" Margin="166,131,0,0" VerticalAlignment="Top" IsChecked="{Binding Path=IsSwimingPool}"/>
         <Viewbox x:Name="vbCalendar" Grid.Column="1" HorizontalAlignment="Left" Height="143" Margin="33,10,0,0" VerticalAlignment="Top" Width="198" Stretch="Fill"/>
-        <Button x:Name="btOrder" Content="הזמן" Grid.Column="1" HorizontalAlignment="Left" Margin="97,161,0,0" VerticalAlignment="Top" Width="75" Click="btOrder_Click"/>
+        <Button x:Name="btOrder" Content="הזמן" Grid.Column="1" HorizontalAlignment="Left" Margin="97,161,0,0" VerticalAlignment="Top" Width="75" Click="btOrder_Click"/>
+
 
     </Grid>
 </UserControl>
