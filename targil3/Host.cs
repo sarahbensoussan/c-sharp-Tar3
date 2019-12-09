@@ -8,7 +8,8 @@ namespace targil3
 {
     public class Host
     {
-        public string HostName;
+
         public List<HostingUnit> Units;
+        public string HostName { get; set; }
     }
 }

@@ -8,11 +8,11 @@ namespace targil3
 {
     public class HostingUnit
     {
-        public string UnitName;
-        public int Rooms;
-        public bool IsSwimmingPool;
+
         public List<DateTime> AllOrders { get; set; }
         public List<string> Uris { get; set; }
-
+        public string UnitName { get; set; }
+        public int Rooms { get; set; }
+        public bool IsSwimmingPool { get; set; }
     }
 }
